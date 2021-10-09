@@ -13,7 +13,7 @@ setup(
     license = "CC-BY-NC-SA",
     keywords = "csv parser cookies",
     url = "https://github.com/kxu112/Quantcast_Challenge/",
-    packages=find_packages(),
+    packages=find_packages('Quantcast_Challenge'),
     scripts = ['most_active_cookie'],
     long_description=read('README.md')
 )
