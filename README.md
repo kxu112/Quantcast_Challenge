@@ -20,7 +20,7 @@ This python command line script is designed to read in a csv file containing two
     
 2. Run script with command line arguments: filename, date
     ```sh
-    ./most_active_cookie cookie.csv 2018-09-12
+    ./most_active_cookie cookie.csv -d 2018-09-12
     ```
 
 
