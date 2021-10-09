@@ -19,6 +19,7 @@ def update_count(cookie_name, cookie_counts):   # Updates the count in the cooki
 def parse_csv(filename, target_date):   # Parses the csv file
     cookie_dict = {}
     with open(filename) as csv_file:
+        matched_date = False
         max_count = 0   # Stores largest number of times a cookie has appeared
         line_cnt = 0
         max_cookies_list = []   # Stores all cookies that have appeared the most
@@ -30,12 +31,16 @@ def parse_csv(filename, target_date):   # Parses the csv file
             cookie_name = row[0]
             date_time = row[1]
             if match_date(date_time, target_date):
+                matched_date == True
                 cookie_count = update_count(cookie_name, cookie_dict)
                 if cookie_count == max_count:
                     max_cookies_list.append(row[0]) # Add cookie to list if appeared highest number of times
                 if cookie_count > max_count:    # Update max_count if cookie has appeared more than all others
                     max_count = cookie_count
                     max_cookies_list = [row[0]]
+            else:
+                if matched_date:    # If we have already come across a match, then there cannot be any more dates that match afterwards
+                    return max_cookies_list
     return max_cookies_list # Returns all cookies that have appeared the highest amount of times
 
 
