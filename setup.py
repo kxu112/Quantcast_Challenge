@@ -14,6 +14,6 @@ setup(
     keywords = "csv parser cookies",
     url = "https://github.com/kxu112/Quantcast_Challenge/",
     packages=find_packages(),
-    scripts = ['bin/most_active_cookie'],
+    scripts = ['./bin/most_active_cookie'],
     long_description=read('README.md')
 )

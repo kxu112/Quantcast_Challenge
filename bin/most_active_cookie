@@ -33,3 +33,5 @@ def main():
                 cookie_counts[row[0]] = curr_cookie_count
     for cookies in max_cookies_list:
         print(cookies, flush = True)
+if __name__ == '__main__':
+    main()
