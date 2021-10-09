@@ -15,5 +15,5 @@ setup(
     url = "https://github.com/kxu112/Quantcast_Challenge/",
     packages=[],
     long_description=read('README.md'),
-    scripts=['bin/most_active_cookies'],
+    scripts=['most_active_cookie'],
 )
