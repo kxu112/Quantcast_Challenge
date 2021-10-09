@@ -24,14 +24,7 @@ def main(filename, date):
         return max_cookies_list
 
 if __name__ == "__main__":
-    '''
-    filename = sys.argv[1]
-    date = sys.argv[3]
-    max_cookies_list = main(filename, date)
-    for cookies in max_cookies_list:
-        print(cookies, flush = True)
-    '''
-    parser = argparse.ArgumentParser(description='Read csv file')
+    parser = argparse.ArgumentParser(description='Reads csv file to identify most common cookie')
     parser.add_argument('file_name', type = str, help = 'Name of csv file')
     parser.add_argument('-d', '--date', required = True, help = 'Target date')
     args = parser.parse_args()
