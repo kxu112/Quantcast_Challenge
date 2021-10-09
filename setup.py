@@ -1,5 +1,5 @@
 import os
-from setuptools import setup
+from setuptools import find_packages, setup
 
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
@@ -13,7 +13,7 @@ setup(
     license = "CC-BY-NC-SA",
     keywords = "csv parser cookies",
     url = "https://github.com/kxu112/Quantcast_Challenge/",
-    packages=[],
-    long_description=read('README.md'),
-    scripts=['most_active_cookie'],
+    packages=find_packages(),
+    scripts = ['bin/most_active_cookie'],
+    long_description=read('README.md')
 )
