@@ -31,7 +31,7 @@ def parse_csv(filename, target_date):   # Parses the csv file
             cookie_name = row[0]
             date_time = row[1]
             if match_date(date_time, target_date):
-                matched_date == True
+                matched_date = True
                 cookie_count = update_count(cookie_name, cookie_dict)
                 if cookie_count == max_count:
                     max_cookies_list.append(row[0]) # Add cookie to list if appeared highest number of times
